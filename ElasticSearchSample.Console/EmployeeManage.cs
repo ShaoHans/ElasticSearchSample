@@ -225,7 +225,7 @@ namespace ElasticSearchSample.Console
                     Home = new Address { Province = provinces[new Random().Next(0, provinces.Count + 1)], City = "" },
                     Mobile = "10123456789",
                     JoinDate = System.DateTime.Now.AddDays(0 - new Random().Next(0, 1000)),
-                    Salary = new Random().Next(10000,100000)
+                    Salary = new Random().Next(10000, 100000)
                 };
                 employees.Add(employee);
             }
