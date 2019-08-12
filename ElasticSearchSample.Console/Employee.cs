@@ -23,6 +23,13 @@ namespace ElasticSearchSample.Console
         public string Mobile { get; set; }
 
         public decimal Salary { get; set; }
+
+        public string NewField { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}--{Name}--{Gender}--{Home?.Province}--{BirthDay.Date}--{JoinDate.Date}--{Mobile}--{Salary}";
+        }
     }
 
     public class Address

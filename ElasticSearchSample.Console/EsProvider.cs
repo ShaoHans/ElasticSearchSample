@@ -20,10 +20,10 @@ namespace ElasticSearchSample.Console
             var pool = new StaticConnectionPool(config.Hosts.Select(h => new Uri(h)));
             var settings = new ConnectionSettings(pool)
                 .RequestTimeout(TimeSpan.FromSeconds(config.TimeOut))
-                .DefaultMappingFor<Employee>((descriptor =>
-                {
-                    return descriptor.IndexName("employees");
-                }))
+                //.DefaultMappingFor<Employee>((descriptor =>
+                //{
+                //    return descriptor.IndexName("employees");
+                //}))
                 .DefaultIndex(indexName);
             HightClient = new ElasticClient(settings);
             LowClient = new ElasticLowLevelClient(settings);
